@@ -5,19 +5,13 @@ public class CountLetters {
 
     //    Instance var:
     private String word;
-    private String wordWithSpace;
     private TreeSet<Character> letters = new TreeSet<Character>();
     private int numberOfLetter;
 
     //    Constructor:
     public CountLetters(String word) {
         if (!word.isEmpty()) {      // check: word contains characters
-            if (word.contains(" ")){        // delete spaces
-                this.wordWithSpace = word;
-                this.word = word.replace(" ", "");
-            } else {    // if word not contains spaces
-                this.word = word;
-            }
+            this.word = word;
         } else {        // if word is empty
             throw new RuntimeException("Word is empty");
         }
@@ -51,7 +45,7 @@ public class CountLetters {
             numberOfLetter = 0;
         }
         out.println(" ");
-        out.println("So the argument is "+ '\u0022' + wordWithSpace + '\u0022');
+        out.println("So the argument is "+ '\u0022' + word + '\u0022');
     }
 }
 

@@ -1,10 +1,9 @@
-import java.util.Scanner;
 
 public class Main {
-    public static void main (String[] args){
 
-        Scanner scanner = new Scanner(System.in);
-        String word = scanner.nextLine();
+    public static void main (String[] args){
+        
+        String word = args[0];
 
         CountLetters countLetters = new CountLetters(word);
         countLetters.count();
